@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body class="w-full min-h-screen flex flex-col bg-gray-50">
+    <!-- Main Content -->
+    <div class="flex-1 w-full px-10 py-10 space-y-4">
+        <!-- Header -->
+        <header class="w-full flex justify-between items-center">
+            <h1 class="text-3xl font-semibold text-black">TopScholar.in</h1>
+            <div class="relative">
+                <button id="profileDropdown" class="bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition-colors">
+                    <!-- Profile Icon (Replace with your image if needed) -->
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="dropdownContent" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100">
+                    <div class="p-2 space-y-2">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Profile</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Settings</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Support</a>
+                        <a href="#" class="block px-4 py-2 text-red-700 font-medium hover:bg-gray-100 rounded-lg transition-colors">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="w-full flex flex-col justify-center items-start py-2">
+            <h1 class="text-base font-semibold text-black">Welcome,</h1>
+            <h1 id="userName" class="text-4xl font-bold text-blue-700">Champ!</h1>
+        </section>
+
+        <!-- Tasks Section -->
+        <main class="w-full flex flex-col justify-center items-start py-4 space-y-4">
+            <h1 class="text-lg font-semibold text-gray-500">Please Complete The Below Tasks,</h1>
+
+            <!-- Candidate Information Card -->
+            <article class="flex flex-col w-full lg:w-1/2 bg-white border border-gray-200 p-4 rounded-xl">
+                <div class="w-full flex justify-between items-center pb-4">
+                    <img id="db1" alt="User" class="w-6">
+                    <button id="dbUpload" class="bg-green-700 px-3 py-1 rounded-lg text-white text-lg font-semibold">Upload</button>
+                </div>
+                <h1 class="text-3xl font-semibold text-black">Candidate Information</h1>
+                <p class="text-base font-medium text-gray-500">Personal, Education, Professional, Skills & Certifications, ID Proof.</p>
+
+                <!-- Progress Bar -->
+                <div class="w-full flex space-x-2 mt-4">
+                    <div class="w-1/5 h-1 bg-gray-800 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-200 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-200 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-200 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-200 rounded-full"></div>
+                </div>
+                <div class="w-full hidden space-x-2 mt-4">
+                    <div class="w-1/5 h-1 bg-gray-800 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-800 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-800 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-800 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-800 rounded-full"></div>
+                </div>
+                <div class="w-full flex justify-between items-center">
+                    <p class="text-gray-600 text-sm">Progress</p>
+                    <p class="text-gray-600 text-sm">0 / 5</p>
+                    <p class="hidden text-gray-600 text-sm">5 / 5</p>
+                </div>
+            </article>
+
+            <!-- Payment Status Card -->
+            <article class="flex flex-col w-full lg:w-1/2 bg-white border border-gray-200 p-4 rounded-xl">
+                <div class="w-full flex justify-between items-center pb-4">
+                    <img id="db2" alt="Payment" class="w-6">
+                    <button class="bg-green-700 px-3 py-1 rounded-lg text-white text-lg font-semibold">Pay Here</button>
+                </div>
+                <h1 class="text-3xl font-semibold text-black">Payment Status</h1>
+                <p class="text-base font-medium text-gray-500">Balance Due - YTBD</p>
+
+                <!-- Progress Bar -->
+                <div class="w-full flex space-x-2 mt-4">
+                    <div class="w-1/5 h-1 bg-gray-800 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-200 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-200 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-200 rounded-full"></div>
+                    <div class="w-1/5 h-1 bg-gray-200 rounded-full"></div>
+                </div>
+                <div class="w-full flex justify-between items-center">
+                    <p class="text-gray-600 text-sm">Progress</p>
+                    <p class="text-gray-600 text-sm">0 / 5</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full text-center text-gray-500 text-sm py-4 bg-white border-t border-gray-200">
+        <p>&copy; 2025 TopScholar.in. All rights reserved.</p>
+    </footer>
+
+    
+
+<script src="./dashboard.bundle.js"></script> 
+</body>
+</html>

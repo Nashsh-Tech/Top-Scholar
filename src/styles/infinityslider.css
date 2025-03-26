@@ -1,0 +1,12 @@
+@keyframes infinite-slider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 13)); /* Adjust based on width and number of slides */
+    }
+}
+
+.animate-infinite-slider {
+    animation: infinite-slider 25s linear infinite;
+}
